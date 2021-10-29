@@ -103,7 +103,7 @@ trait HasDuplicates
         $model = $this->duplicateModelWithExcluding();
         $model = $this->duplicateModelWithUnique($model);
 
-        $model->save();
+        $model->saveQuietly();
 
         return $model;
     }
